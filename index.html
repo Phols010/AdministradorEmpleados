@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Administrador de Empleados</h1>
+        <div id="acciones">
+            <button onclick="mostrarFormulario()">Agregar Empleado</button>
+            <button onclick="listarEmpleados()">Listar Empleados</button>
+        </div>
+        <div id="formulario" style="display:none;">
+            <h2>Agregar Empleado</h2>
+            <input type="number" id="numeroEmpleado" placeholder="Número de empleado">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellido" placeholder="Apellido">
+            <input type="number" id="edad" placeholder="Edad">
+            <input type="text" id="puesto" placeholder="Puesto">
+            <input type="number" id="salario" placeholder="Salario">
+            <button onclick="agregarEmpleado()">Agregar</button>
+            <button onclick="ocultarFormulario()">Cancelar</button>
+        </div>
+        <div id="lista-empleados"></div>
+        <div id="busqueda">
+            <input type="text" id="apellidoBusqueda" placeholder="Buscar por Apellido">
+            <button onclick="buscarPorApellido()">Buscar</button>
+        </div>
+        <div id="actualizacion">
+            <input type="text" id="nombreActualizar" placeholder="Nombre">
+            <input type="text" id="apellidoActualizar" placeholder="Apellido">
+            <button onclick="actualizarEmpleado()">Actualizar</button>
+        </div>
+        <div id="eliminacion">
+            <input type="number" id="numeroEmpleadoEliminar" placeholder="Número de empleado">
+            <button onclick="eliminarEmpleado()">Eliminar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
